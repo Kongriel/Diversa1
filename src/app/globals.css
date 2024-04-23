@@ -6,6 +6,13 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+/***FONT SIZE***/
+  --size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
+  --size-step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
+  --size-step-2: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem);
+  --size-step-3: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem);
+  --size-step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,48 +38,3 @@ body {
     text-wrap: balance;
   }
 }
-
-
-/* **********DESIGN SYSTEM********** */
-
-/***FONT SIZE***/
-
-/* :root {
-  --size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
-  --size-step-1: clamp(1.25rem, calc(1.16rem + 0.43vw), 1.5rem);
-  --size-step-2: clamp(1.56rem, calc(1.41rem + 0.76vw), 2rem);
-  --size-step-3: clamp(1.95rem, calc(1.71rem + 1.24vw), 2.66rem);
-  --size-step-4: clamp(2.44rem, calc(2.05rem + 1.93vw), 3.55rem);
-} */
-
-/***BREAKOUT GRID***/
-
-/* article {
-
-  --gap: clamp(1rem, 6vw, 3rem);
-  --full: minmax(var(--gap), 1fr);
-  --content: min(50ch, 100% - var(--gap) * 2);
-  --popout: minmax(0, 2rem);
-  --feature: minmax(0, 5rem);
-
-  display: grid;
-  grid-template-columns:
-    [full-start] var(--full)
-    [feature-start] var(--feature)
-    [popout-start] var(--popout)
-    [content-start] var(--content) [content-end]
-    var(--popout) [popout-end]
-    var(--feature) [feature-end]
-    var(--full) [full-end];
-}
-
-Eksempel på hvordan man kan bruge breakout grid:
-article > * {
-  grid-column: content;
-} 
-img{
-  grid-column: full;
-}
-blockquote{
-  grid-column: feature;
-} */
